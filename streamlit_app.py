@@ -9,10 +9,15 @@ import pandas
 # call the read_csv function
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 my_fruit_list = my_fruit_list.set_index('Fruit')
+fruits_selected = streamlit.multiselect('Pick some fruits:',list(my_fruit_list.index),['Avocado','Strawberries'])
+fruits_to_show = my_fruit_list.loc[fruits_selected]
+
 # Use streamlit dataframe to call the my_fruit_list object
 streamlit.dataframe(my_fruit_list)
 
 # Put a pick-list to select the fruit to include
 # iteration 2: added selections in the square brackets to indicate the pre-populated list
-streamlit.multiselect('Pick some fruits:',list(my_fruit_list.index),['Avocado','Strawberries'])
+# iteration 3: show only the selected fruits on the streamlit dataframe
+
+streamlit.dataframe(fruits_to_show)
 

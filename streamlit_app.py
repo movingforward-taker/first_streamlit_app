@@ -13,5 +13,6 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 streamlit.dataframe(my_fruit_list)
 
 # Put a pick-list to select the fruit to include
-streamlit.multiselect('Pick some fruits:',list(my_fruit_list.index))
+# iteration 2: added selections in the square brackets to indicate the pre-populated list
+streamlit.multiselect('Pick some fruits:',list(my_fruit_list.index),['Avocado','Strawberries'])
 

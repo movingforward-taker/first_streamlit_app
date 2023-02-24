@@ -13,11 +13,11 @@ fruits_selected = streamlit.multiselect('Pick some fruits:',list(my_fruit_list.i
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Use streamlit dataframe to call the my_fruit_list object
-streamlit.dataframe(my_fruit_list)
+# streamlit.dataframe(my_fruit_list)
 
 # Put a pick-list to select the fruit to include
 # iteration 2: added selections in the square brackets to indicate the pre-populated list
 # iteration 3: show only the selected fruits on the streamlit dataframe
-
+# streamlit.multiselect('Pick some fruits:',list(my_fruit_list.index),['Avocado','Strawberries'])
 streamlit.dataframe(fruits_to_show)
 

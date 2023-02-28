@@ -38,7 +38,7 @@ streamlit.dataframe(fruits_to_show)
 #streamlit.dataframe(fruityvice_normalized)
 
 #create a function to group the repeatable code block
-def get_fruityvicedata(this_fruit_choice)
+def get_fruityvicedata(this_fruit_choice):
       fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
       fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
       return fruityvice_normalized

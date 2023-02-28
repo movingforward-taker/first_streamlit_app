@@ -41,7 +41,7 @@ streamlit.header('Fruityvice Fruit Advice!')
 #streamlit.dataframe(fruityvice_normalized)
 
 try:
-    fruit_choice = streamlit.text_input('What Fruit would you like information about?')
+  fruit_choice = streamlit.text_input('What Fruit would you like information about?')
   if not fruit_choice:
       streamlit.error('Please select a fruit for information')
   else:
